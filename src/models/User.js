@@ -1,8 +1,9 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection'); 
-   // En Mayúsculas y singular      // en minúsculas y singular
+//Table is being created with this part of the script once the environment runs. 
+//if there is an error with a data type drop table may be needed if data is not present in the table
 const User = sequelize.define('user', {
-    // Definimos las columnas aquí
+    // Colum definitions
     first_name: {
         type: DataTypes.STRING,
         allowNull: false
